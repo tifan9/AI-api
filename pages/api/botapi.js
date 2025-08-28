@@ -2,7 +2,7 @@ const { DiscussServiceClient } = require("@google-ai/generativelanguage");
 const { GoogleAuth } = require("google-auth-library");
 
 const MODEL_NAME = "models/chat-bison-001";
-const API_KEY = "AIzaSyAt2CPCMZ975OzkDTVc2Qhxqp9FOWJVpgs"
+const API_KEY = process.env.API_KEY
 
 const client = new DiscussServiceClient({
   authClient: new GoogleAuth().fromAPIKey(API_KEY),
